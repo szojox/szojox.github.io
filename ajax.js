@@ -1,7 +1,14 @@
 
 
 initDragElement();
-
+$('#cmdinput').val('guest@szojox.github.io#');
+$("#cmdinput").on("keydown",function search(e) {
+  if(e.keyCode == 13) {
+      
+      $("#cmdlist").append('<br/>'+$(this).val());
+      $(this).val('guest@szojox.github.io# ');
+  }
+});
 function getCookieVal(name) {
 // Split cookie string and get all individual name=value pairs in an array
 var cookieArr = document.cookie.split(";");
