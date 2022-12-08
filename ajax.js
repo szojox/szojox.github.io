@@ -403,26 +403,7 @@ $('body').append(return_data);
 
 }
 
-function dodajmaszyne(rodzic,id_edit,usun){
-let iddivrand = Date.now().valueOf();
 
-initDragElement();
-$.post( 'func.php', { iddiv: iddivrand, add_by_userid: <?php if(isset($_SESSION['gluserID'])){echo $_SESSION['gluserID'];}else{echo 0;}  ?>,parent: rodzic,machine_id: id_edit, del : usun  }, function( data ) {
-$('body').append('<div id="'+iddivrand+'" class="window"></div>');
-$( '#'+iddivrand ).show();
-$( '#'+iddivrand ).css('z-index', getCookieVal('currentzindex'));
-
-
-$( '#'+iddivrand).html(data);
-if(usun == 1){
-
-    getfilelist($('#container').empty(),0);
-    $( '#'+iddivrand ).hide();
-    $( '#'+iddivrand ).empty();
-}
-
-});
-}
 
 
 
