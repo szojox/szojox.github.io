@@ -50,7 +50,7 @@ $("#cmdinput").on("keydown",function search(e) {
     }
    
     if($('#cmdinput').val().toLowerCase() == 'cv-download'){
-    window.location.href = "cv.html";}
+    window.location.href = "./CV_2022.pdf";}
       if($('#cmdinput').val().toLowerCase() == 'help'){
         setTimeout(function(){$("#cmdlist").append(  '<div>cv - view cv in cmd</div>')}, 250);  
         setTimeout(function(){$("#cmdlist").append(  '<div>cv-download - download cv in pdf file</div>')}, 550);  
