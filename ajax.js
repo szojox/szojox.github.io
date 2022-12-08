@@ -6,7 +6,7 @@ $('#cmd').css('top',parseInt($('#cmd').innerHeight())/4);
 
 $('#cmd').css('left',parseInt($('#cmd').innerWidth())/3);
 
-$.get( "./logo.txt", function( data ) {
+$.get( "logo.txt", function( data ) {
   var file = data;
   var reader = new FileReader();
   reader.onload = function(progressEvent){    
