@@ -36,9 +36,9 @@ $('#cmd').css('left',parseInt($('#cmd').innerWidth())/3);
 setTimeout(function(){$("#cmdlist").append(  '<div>Type help to get more info</div>')}, 700);  
 $("#cmdinput").on("keydown",function search(e) {
   if(e.keyCode == 13) {
+   
     if($('#cmdinput').val().toLowerCase() == 'cv'){
-      $("#cmdlist").append('<div>guest@szojox.github.io# '+$(this).val()+'</div>');
-      $.get("cv.html", function(data){
+       $.get("cv.html", function(data){
         $('body').append(data);
         initDragElement();
         $('#cv').css('top',parseInt($('#cv').innerHeight())/4);
@@ -48,15 +48,17 @@ $("#cmdinput").on("keydown",function search(e) {
     });
 
     }
+   
     if($('#cmdinput').val().toLowerCase() == 'cv-download'){
     window.location.href = "cv.html";}
       if($('#cmdinput').val().toLowerCase() == 'help'){
-        $("#cmdlist").append('<div>guest@szojox.github.io# '+$(this).val()+'</div>');
         setTimeout(function(){$("#cmdlist").append(  '<div>cv - view cv in cmd</div>')}, 250);  
         setTimeout(function(){$("#cmdlist").append(  '<div>cv-download - download cv in pdf file</div>')}, 550);  
 
-      }else{
-      $("#cmdlist").append('<div>guest@szojox.github.io# '+$(this).val()+'</div>');}
+      }
+      
+     
+      $("#cmdlist").append('<div>guest@szojox.github.io# '+$(this).val()+'</div>');
       $(this).val('');
   }
 });
