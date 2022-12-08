@@ -44,6 +44,7 @@ $("#cmdinput").on("keydown",function search(e) {
         $('#cv').css('top',parseInt($('#cv').innerHeight())/4);
         $('#cv').css('left',parseInt($('#cv').innerWidth())/3);
         $('#cv').css('z-index',getCookieVal('currentzindex')+1);
+        maximize('#cv');
         
     });
 
