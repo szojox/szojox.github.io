@@ -25,7 +25,7 @@ $('#cmd').css('top',parseInt($('#cmd').innerHeight())/4);
 
 $('#cmd').css('left',parseInt($('#cmd').innerWidth())/3);
 
-
+$('#cmdinput').focus();
 
 
 
