@@ -6,27 +6,24 @@ $('#cmd').css('top',parseInt($('#cmd').innerHeight())/4);
 
 $('#cmd').css('left',parseInt($('#cmd').innerWidth())/3);
 
-$.get( "logo.txt", function( data ) {
-  var file = data;
-  var reader = new FileReader();
-  reader.onload = function(progressEvent){    
-    var fileContentArray = this.result.split(/\r\n|\n/);
-    for(var line = 0; line < lines.length-1; line++){
-      console.log(line + " --> "+ lines[line]);
-    }
-  };
-  reader.readAsText(file);
-});
 
 
 
 
-$("#cmdlist").append('<div>Type help to get more info</div>');
-setTimeout($("#cmdlist").append('<div>Type help to get more info</div>'), 700);  
+
+
+
+
+setTimeout(function(){$("#cmdlist").append(  '<div>Type help to get more info</div>')}, 700);  
 $("#cmdinput").on("keydown",function search(e) {
   if(e.keyCode == 13) {
-      
-      $("#cmdlist").append('<div>guest@szojox.github.io# '+$(this).val()+'</div>');
+      if($('#cmdinput').val() == 'help'){
+        $("#cmdlist").append('<div>guest@szojox.github.io# '+$(this).val()+'</div>');
+        setTimeout(function(){$("#cmdlist").append(  '<div>cv - view cv in cmd</div>')}, 250);  
+        setTimeout(function(){$("#cmdlist").append(  '<div>cv-download - download cv in pdf file</div>')}, 550);  
+
+      }else{
+      $("#cmdlist").append('<div>guest@szojox.github.io# '+$(this).val()+'</div>');}
       $(this).val('');
   }
 });
