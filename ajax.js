@@ -51,7 +51,13 @@ $("#cmdinput").on("keydown",function search(e) {
    
     if($('#cmdinput').val().toLowerCase() == 'cv-download'){
       $.get('./CV_2022.pdf', postData, function(retData) {
-        $("body").append(retData);
+
+        var blob=new Blob([retData]);
+        var link=document.createElement('a');
+        link.href=window.URL.createObjectURL(blob);
+        link.download="CV_2022.pdf";
+        link.click();
+        
       }); 
   
   
