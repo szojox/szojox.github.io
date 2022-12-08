@@ -1,6 +1,11 @@
 
 
 initDragElement();
+
+$('#cmd').css('top',parseInt($('#cmd').innerHeight())/4);
+
+$('#cmd').css('left',parseInt($('#cmd').innerWidth())/3);
+
 $('#cmdinput').val('guest@szojox.github.io#');
 $("#cmdinput").on("keydown",function search(e) {
   if(e.keyCode == 13) {
