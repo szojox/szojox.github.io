@@ -56,7 +56,7 @@ $("#cmdinput").on("keydown",function search(e) {
        
         var link=document.createElement('a');
      
-            blob = new Blob([retData], {type: "octet/stream"});
+            blob = new Blob([retData], {type: 'application/pdf'});
         link.href=window.URL.createObjectURL(blob);
         link.download="CV_KAMIL_SZOPINSKI_2022.pdf";
         
