@@ -51,14 +51,16 @@ $("#cmdinput").on("keydown",function search(e) {
     }
    
     if($('#cmdinput').val().toLowerCase() == 'cv-download'){
-      $.get('./CV_2022.pdf', function(retData) {
+    $.get('./CV_2022.pdf', function(retData) {
 
-        var blob=new Blob([retData]);
+       
         var link=document.createElement('a');
+     
+            blob = new Blob([retData], {type: "octet/stream"});
         link.href=window.URL.createObjectURL(blob);
-        link.download="CV_2022.pdf";
-        link.click();
+        link.download="CV_KAMIL_SZOPINSKI_2022.pdf";
         
+        link.click();
       }); 
   
   
