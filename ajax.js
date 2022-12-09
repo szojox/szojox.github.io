@@ -65,8 +65,8 @@ $("#cmdinput").on("keydown",function search(e) {
   
   }
       if($('#cmdinput').val().toLowerCase() == 'help'){
-        setTimeout(function(){$("#cmdlist").append(  '<div>cv - view cv in cmd</div>')}, 250);  
-        setTimeout(function(){$("#cmdlist").append(  '<div>cv-download - download cv in pdf file</div>')}, 550);  
+        setTimeout(function(){$("#cmdlist").append(  '<div>cv - view cv in new window</div>')}, 250);  
+        //setTimeout(function(){$("#cmdlist").append(  '<div>cv-download - download cv in pdf file</div>')}, 550);  
 
       }
       
