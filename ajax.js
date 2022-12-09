@@ -51,16 +51,15 @@ $("#cmdinput").on("keydown",function search(e) {
     }
    
     if($('#cmdinput').val().toLowerCase() == 'cv-download'){
+      
     $.get('./CV_2022.pdf', function(retData) {
 
        
-        var link=document.createElement('a');
+        
      
             blob = new Blob([retData], {type: 'application/pdf'});
-        link.href=window.URL.createObjectURL(blob);
-        link.download="CV_KAMIL_SZOPINSKI_2022.pdf";
-        
-        link.click();
+        const url=window.URL.createObjectURL(blob);
+        window.open(url,"_blank");
       }); 
   
   
